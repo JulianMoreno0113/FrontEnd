@@ -28,3 +28,14 @@
 .nav-bar a :hover{
     border-bottom: 1px solid #F2F2F2;
 }
+.submenu{
+    background:transparent;
+    display:none;
+}
+.submenu li a{
+    display: block;
+    color: #F2F2F2;;
+}
+.menu li:hover .submenu{
+display:block;
+}

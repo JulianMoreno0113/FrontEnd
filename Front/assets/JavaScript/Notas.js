@@ -1,22 +1,22 @@
-var url="https://localhost:44316/api/estudiantes";
+var url="https://localhost:44316/api/MateriaEstudiante";
 Get();
 function Get(){
 fetch(url).then(function(response){
     return response.json();
-}).then(function(estudiantes){ 
+}).then(function(MateriaEstudiante){ 
     document.querySelector(".tbody").innerHTML="";
-    console.log(estudiantes)
-    for(i=0; i<estudiantes.length; i++){
+    console.log(MateriaEstudiante)
+    for(i=0; i<MateriaEstudiante.length; i++){
         let tr = document.createElement("tr");
         let tdButton = document.createElement("td");
         let buttonEditar = document.createElement("button");
         let buttonEliminar = document.createElement("button");
         buttonEditar.innerHTML="Editar";
         buttonEliminar.innerHTML="Eliminar";
-        let campos = `<td>${estudiantes[i].nombres}</td>
-                      <td>${estudiantes[i].apellidos}</td>
-                      <td>${estudiantes[i].documento}</td>
-                      <td>${estudiantes[i].tipoDocumento}</td>`            
+        let campos = `<td>${MateriaEstudiante[i].nombreEstudiante}</td>
+                      <td>${MateriaEstudiante[i].nombreMateria}</td>
+                      <td contenteditable>${MateriaEstudiante[i].nota1}</td>
+                      <td contenteditable>${MateriaEstudiante[i].nota2}</td>`         
         tr.innerHTML = campos;
         buttonEditar.classList.add("buttonEditar");
         buttonEliminar.classList.add("buttonEliminar");
@@ -87,13 +87,13 @@ function Delete(id){
             'Accept':"application/json",
             "content-Type":"application/json"
         }
-    }).then(function(personas){
-        if(personas.ok){
+    }).then(function(MateriaEstudiante){
+        if(MateriaEstudiante.ok){
             return personas.text();
         }else{
             alert ("ERROR AL GENERAR LA SOLUCITUD")
         }
-    }).then(function(personas){
+    }).then(function(MateriaEstudiante){
         Get();
         alertify.success('Eliminado correctamente')
     })

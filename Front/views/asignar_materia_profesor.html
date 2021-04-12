@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/styles/NavbarStyles.css">
     <link rel="stylesheet" href="../assets/styles/StyleForms.css">
-    <title>Alumnos</title>
+    <title>Asignar Profesor</title>
 </head>
 <body>
     <nav class="nav-bar">
@@ -28,32 +28,21 @@
     </nav>
 
     <section class="seccionFormulario">
-        <h1 class="tituloForm">Agregar Alumnos</h1>
+        <h1 class="tituloForm">Asignar Materia a Profesor</h1>
         <form class="frm">
             <div class="contenedorInputs">
-                <div>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" placeholder="Escribe el Nombre">
-                </div>
-                <div>
-                    <label for="apellido">Apellido:</label>
-                    <input type="text"id="apellido" placeholder="Escribe el Apellido">
-                </div>
-                <div>
-                    <label for="documento">Documento:</label>
-                    <input type="number" id="documento"  placeholder="Escribe la identificacion">
-                </div>
-                <div>
-                <label for="tipoId">Tipo Documento:</label>
-                <select id="tipoId">
+                <label for="nombreProfesor">Nombre del Profesor: </label>
+                <select id="nombreProfesor">
                     <option>Selecione...</option>
-                    <option value="CC">CC</option>
-                    <option value="TI">TI</option>
+                </select>
+                <label for="nombreMateria">Materia: </label>
+                <select id="nombreMateria">
+                    <option>Selecione...</option>
                 </select>
                 </div>
             </div> 
             <div class="buttons">
-                <input type="button" value="Agregar" id="ButtonAdd"> 
+                <input type="button" value="Asignar" id="ButtonAdd"> 
             </div>
         </form>
         <hr>
@@ -61,18 +50,17 @@
     
     <section class="seccionTabla">
         <div class="encabezadoTabla">
-            <h1 class="tituloTabla">Gestionar Alumnos</h1>
+            <h1 class="tituloTabla">Gestionar Asignación</h1> 
             <div>
-                <input type="text" placeholder="Buscar por Documento" id="BuscarId">
+                <input type="text" placeholder="Buscar por Materia" id="BuscarId">
             </div>
         </div>
         <table class="tablaAlumnos"> 
             <thead>
                 <tr>
-                <th>Identificación</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Tipo documento</th>
+                <th>Nombre Del Profesor</th>
+                <th>Materia</th>
+                <th>Nombre Del Alumno</th>
                 <th>Acción</th>
                 </tr>
             </thead>
@@ -81,7 +69,7 @@
             </tbody>
         </table>
     </section>
-    <script src="../assets/JavaScript/Alumnos.js"></script>
+    <script src="../assets/JavaScript/"></script>
 </body>
 </html>
-
+ 
