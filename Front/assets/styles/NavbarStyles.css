@@ -1,0 +1,30 @@
+.nav-bar{
+    background-color: #3A6D8C;
+    color: #F2F2F2;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 16%;
+}
+.nav-bar ul{
+    padding: 40px;
+    padding-top: 10px;
+}
+
+.nav-bar ul li {
+    list-style: none;
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+}
+.nav-bar ul li img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.nav-bar a{
+    text-decoration: none;
+    color: #F2F2F2;
+}
+.nav-bar a :hover{
+    border-bottom: 1px solid #F2F2F2;
+}

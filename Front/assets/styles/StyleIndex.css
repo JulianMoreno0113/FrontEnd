@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    font-family: Roboto;
+    color: #0D0D0D;
+}
+
+.slideimg{
+    position: absolute;
+    width: 80%;
+    margin-left: 18%;
+    top: 41px;
+}
+.slideimg img{
+    width: 100%;
+    max-height: 480px;
+}
+.slideimg div{
+    text-align: center;
+    margin-top: -35px;
+}
+.slideimg button {
+    border-radius: 20px;
+    height: 15px;
+    width: 15px;
+    border: none;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: #F2F2F2;
+}
+.RedesSociales{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 80%;
+    margin-left: 18%;
+    top: 550px;
+}
+.RedesSociales div{
+    text-align: center;
+    border: solid 1px #0D0D0D;
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 41px;
+}
+.RedesSociales div button{
+    margin-top: 70px;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    background-color: #0D0D0D;
+    color: #F2F2F2;
+    border: none;
+    cursor: pointer;
+}
+
