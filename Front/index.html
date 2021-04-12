@@ -23,8 +23,14 @@
         </ul>
     </nav>
     <section class="slideimg"> 
-        <img src="assets/img/Colegio1.png" alt="">
-           <div><button></button><button></button><button></button></div>
+        <img src="assets/img/Colegio1.png" class="imgIndexSlide" alt="">
+        <img src="assets/icons/back.svg" alt="icon back" class="icons back" onclick="RetrocederDatos()">
+        <img src="assets/icons/next.svg" alt="icon next" class="icons next" onclick="AdelantarDatos()">
+           <div>
+                <button class="ContentButtons" onclick="SlideBotones(0)"></button>
+                <button class="ContentButtons" onclick="SlideBotones(1)"></button>
+                <button class="ContentButtons" onclick="SlideBotones(2)"></button>
+            </div>
     </section>
     <section class="RedesSociales">
         <div class="twitter">
@@ -44,5 +50,6 @@
         </div>
 
     </section>
+    <script src="assets/JavaScript/logicIndexImg.js"></script>
 </body>
 </html>
