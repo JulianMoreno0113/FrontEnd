@@ -12,8 +12,9 @@
 </head>
 
 <body>
-    <nav class="nav-bar">
-        <ul>
+   <img class="Icono hamburguesa" src="../assets/icons/menu.svg" alt="">
+    <nav class="nav-bar ver  ">
+        <ul class="menu">
             <a href="../index.html">
                 <li> <img src="../assets/icons/home 1.svg" alt="Icono Incio"> INICIO</li>
             </a>
@@ -33,21 +34,27 @@
             <a href="notas.html">
                 <li> <img src="../assets/icons/los-grados 1.svg" alt="Icono Notas"> NOTAS</li>
             </a>
+            <a href="#"><li> <img src="../assets/icons/asignar.svg" alt="Icono Asignar"> <br> ASIGNAR 
+                <ul class="submenu">
+                <li><a href="asignar_materia_profesor.html">Profesor</a></li>
+                <li><a href="asignar.html">Alumno</a></li>
+                </ul></li></a>
         </ul>
     </nav>
 
-    <section class="seccionFormulario">
-        <h1 class="tituloForm">Agregar Maestros</h1>
+    <section class="seccionFormulario ver hidden">
+        <h1 class="tituloForm hidden">Agregar Maestros</h1>
         <form class="frm">
             <div class="contenedorInputs">
-                <div>
+                <div >
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" placeholder="Escribe el Nombre">
                 </div>
-                <div>
+                <div >
                     <label for="apellido">Apellido:</label>
                     <input type="text" id="apellido" placeholder="Escribe el Apellido">
                 </div>
+                
                 <div>
                     <label for="documento">Documento:</label>
                     <input type="number" id="documento" placeholder="Escribe la identificacion">
@@ -68,7 +75,7 @@
         <hr>
     </section>
 
-    <section class="seccionTabla">
+    <section class="seccionTabla ver hidden">
         <div class="encabezadoTabla">
             <h1 class="tituloTabla">Gestionar Maestros</h1>
             <div>
@@ -93,6 +100,7 @@
             </tbody>
         </table>
     </section>
+    <script src="../assets/JavaScript/menu.js"></script>
     <script src="../assets/JavaScript/Maestros.js"></script>
 </body>
 </html>

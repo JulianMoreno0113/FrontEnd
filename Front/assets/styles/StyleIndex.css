@@ -3,6 +3,9 @@ body{
     font-family: Roboto;
     color: #0D0D0D;
 }
+button{
+    outline:none;
+}
 
 .slideimg{
     position: absolute;
@@ -10,9 +13,25 @@ body{
     margin-left: 18%;
     top: 41px;
 }
-.slideimg img{
+.slideimg .imgIndexSlide{
     width: 100%;
     max-height: 480px;
+    height:350px;
+}
+.slideimg .icons{
+    position: absolute;
+    width: 3%;
+    top: 50%;
+    cursor: pointer;
+}
+.slideimg .active{
+    background-color: #3A6D8C;
+}
+.next{
+    right:0;
+}
+.back{
+    left:0;
 }
 .slideimg div{
     text-align: center;
@@ -67,6 +86,9 @@ body{
     top: 80px;
     width: 80%;
   
+}
+.slideimg .imgIndexSlide{
+    height:150px;
 }
 
 .RedesSociales{

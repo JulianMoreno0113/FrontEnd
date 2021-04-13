@@ -1,4 +1,4 @@
-let botonMenu = document.querySelector(".menu");
+let botonMenu = document.querySelector(".hamburguesa");
 let ver=document.querySelectorAll('.ver');
 botonMenu.addEventListener('click',MostrarNav);
 

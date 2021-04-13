@@ -11,25 +11,34 @@
     <title>Inicio App Colegio</title>
 </head>
 <body>
-     <img class="Icono menu" src="./assets/icons/menu.svg" alt="">
+     <img class="Icono hamburguesa" src="./assets/icons/menu.svg" alt="">
     <nav class="nav-bar ver  ">
         
        
     
-        <ul>
+        <ul class="menu">
            <a href="index.html"> <li> <img src="assets/icons/home 1.svg" alt="Icono Incio"> INICIO</li></a>
             <hr>
-            <a href="/views/reportes.html"><li> <img src="assets/icons/lista-de-verificacion 1.svg" alt="Icono Reportes"> REPORTES</li></a>
+            <a href="views/reportes.html"><li> <img src="assets/icons/lista-de-verificacion 1.svg" alt="Icono Reportes"> REPORTES</li></a>
             <a href="views/maestros.html"><li> <img src="assets/icons/aula 1.svg" alt="Icono Maestros"> MAESTROS</li></a>
             <a href="views/materias.html"><li> <img src="assets/icons/libro 1.svg" alt="Icono Materias"> MATERIAS</li></a>
             <a href="views/alumnos.html"><li> <img src="assets/icons/sombrero-de-graduacion 1.svg" alt="Icono Alumnos"> ALUMNOS</li></a>
             <a href="views/notas.html"><li> <img src="assets/icons/los-grados 1.svg" alt="Icono Notas"> NOTAS</li></a>
-        </ul>
+            <a  href="#"><li class="asignar"> <img  src="assets/icons/asignar.svg" alt="Icono Asignar"><br> ASIGNAR <ul class="submenu">
+                <li><a href="views/asignar_materia_profesor.html">Profesor</a></li>
+                <li><a href="views/asignar.html">Alumno</a></li>
+                </ul></li></a>
+            </ul>
     </nav>
-    <main>
-    <section class="slideimg ver  hidden"> 
-        <img src="assets/img/Colegio1.png" alt="">
-           <div><button></button><button></button><button></button></div>
+    <section class="slideimg ver hidden "> 
+        <img src="assets/img/Colegio1.png" class="imgIndexSlide" alt="">
+        <img src="assets/icons/back.svg" alt="icon back" class="icons back" onclick="RetrocederDatos()">
+        <img src="assets/icons/next.svg" alt="icon next" class="icons next" onclick="AdelantarDatos()">
+           <div>
+                <button class="ContentButtons" onclick="SlideBotones(0)"></button>
+                <button class="ContentButtons" onclick="SlideBotones(1)"></button>
+                <button class="ContentButtons" onclick="SlideBotones(2)"></button>
+            </div>
     </section>
     <section class="RedesSociales ver hidden">
         <div class="twitter ver hidden">
@@ -51,5 +60,6 @@
     </section>
     </main>
     <script src="./assets/JavaScript/menu.js"></script>
+    <script src="assets/JavaScript/logicIndexImg.js"></script>
 </body>
 </html>

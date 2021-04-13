@@ -11,7 +11,7 @@
 </head>
 <body>
     <nav class="nav-bar">
-        <ul>
+        <ul class="menu">
            <a href="../index.html"> <li> <img src="../assets/icons/home 1.svg" alt="Icono Incio"> INICIO</li></a>
             <hr>
             <a href="reportes.html"><li> <img src="../assets/icons/lista-de-verificacion 1.svg" alt="Icono Reportes"> REPORTES</li></a>
@@ -19,6 +19,11 @@
             <a href="materias.html"><li> <img src="../assets/icons/libro 1.svg" alt="Icono Materias"> MATERIAS</li></a>
             <a href="alumnos.html"><li> <img src="../assets/icons/sombrero-de-graduacion 1.svg" alt="Icono Alumnos"> ALUMNOS</li></a>
             <a href="notas.html"><li> <img src="../assets/icons/los-grados 1.svg" alt="Icono Notas"> NOTAS</li></a>
+            <a href="#"><li> <img src="../assets/icons/asignar.svg" alt="Icono Asignar"> ASIGNAR
+                <ul class="submenu">
+                <li><a href="asignar_materia_profesor.html">Profesor</a></li>
+                <li><a href="asignar.html">Alumno</a></li>
+                </ul></li></a>
         </ul>
     </nav>
 
@@ -26,21 +31,21 @@
         <h1 class="tituloForm">Agregar Alumnos</h1>
         <form class="frm">
             <div class="contenedorInputs">
-                <div>
+                <div >
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" placeholder="Escribe el Nombre">
                 </div>
-                <div>
+                <div class="inputs2">
                     <label for="apellido">Apellido:</label>
                     <input type="text"id="apellido" placeholder="Escribe el Apellido">
                 </div>
-                <div>
+                <div class="inputs2">
                     <label for="documento">Documento:</label>
                     <input type="number" id="documento"  placeholder="Escribe la identificacion">
                 </div>
-                <div>
+                <div class="inputs2">
                 <label for="tipoId">Tipo Documento:</label>
-                <select id="tipoId">
+                <select id="tipoId" >
                     <option>Selecione...</option>
                     <option value="CC">CC</option>
                     <option value="TI">TI</option>
@@ -48,7 +53,7 @@
                 </div>
             </div> 
             <div class="buttons">
-                <input type="button" value="Agregar" id="ButtonAdd" onclick="Post()"> 
+                <input type="button" value="Agregar" id="ButtonAdd"> 
             </div>
         </form>
         <hr>
@@ -76,37 +81,6 @@
             </tbody>
         </table>
     </section>
-
-    <div class="modalUpdate">
-        <div class="headerModal">
-            <h2>Editar Alumno</h2>
-        </div>
-            <form class="frmEditar">
-                <div class="contenedorInputsEditar">
-                    <div>
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombreEditar" placeholder="Escribe el Nombre">
-                        <label for="apellido">Apellido:</label>
-                        <input type="text"id="apellidoEditar" placeholder="Escribe el Apellido">
-                    </div>
-                    <div>
-                        <label for="documento">Documento:</label>
-                        <input type="number" id="documentoEditar"  placeholder="Escribe la identificacion">
-                        <label for="tipoId">Tipo Documento:</label>
-                        <select id="tipoIdEditar">
-                            <option>Selecione...</option>
-                            <option value="CC">CC</option>
-                            <option value="TI">TI</option>
-                        </select>
-                    </div>
-                </div> 
-                <div class="buttonsEditar">
-                    <input type="button" value="Guardar Cambios" id="ButtonAddEditar"> 
-                    <input type="button" value="Cerrar" id="ButtonCloseEditar" onclick="CloseUpdate()"> 
-                </div>
-            </form>
-    </div>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="../assets/JavaScript/Alumnos.js"></script>
 </body>
 </html>
