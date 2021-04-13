@@ -102,3 +102,7 @@
 		width: 10%;
 	}
 }
+.menu li:hover .submenu{
+display:block;
+stroke-dashoffset: 1;
+}
