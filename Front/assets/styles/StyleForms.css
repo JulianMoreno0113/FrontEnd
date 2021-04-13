@@ -104,6 +104,49 @@ body{
 th{
     font-size:1.5vw;
 }
+.modalUpdate{
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 50%;
+    top: 30%;
+    left:30%;
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    display: none;
+}
+.headerModal{
+    background-color: #023859;  
+    padding:20px;
+    text-align:center;  
+    border-radius: 10px 10px 0px 0px;
+}
+.headerModal h2{
+    margin: 0;
+    color: #F2F2F2F2;
+}
+.frmEditar{
+    padding: 30px;
+}
+.contenedorInputsEditar{
+    display: flex;
+    justify-content:space-around;
+}
+
+.contenedorInputsEditar input,.contenedorInputsEditar select{
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.buttonsEditar{
+    display: flex;
+}
+#ButtonCloseEditar{
+    background-color: #D9544F;
+    color: #F2F2F2;
+}
 
 @media (max-width: 600px) {
     

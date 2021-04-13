@@ -53,7 +53,7 @@
                 </div>
             </div> 
             <div class="buttons">
-                <input type="button" value="Agregar" id="ButtonAdd"> 
+                <input type="button" value="Agregar" id="ButtonAdd" onclick="Post()"> 
             </div>
         </form>
         <hr>
@@ -81,6 +81,35 @@
             </tbody>
         </table>
     </section>
+    <div class="modalUpdate">
+        <div class="headerModal">
+            <h2>Editar Alumno</h2>
+        </div>
+            <form class="frmEditar">
+                <div class="contenedorInputsEditar">
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombreEditar" placeholder="Escribe el Nombre">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text"id="apellidoEditar" placeholder="Escribe el Apellido">
+                    </div>
+                    <div>
+                        <label for="documento">Documento:</label>
+                        <input type="number" id="documentoEditar"  placeholder="Escribe la identificacion">
+                        <label for="tipoId">Tipo Documento:</label>
+                        <select id="tipoIdEditar">
+                            <option>Selecione...</option>
+                            <option value="CC">CC</option>
+                            <option value="TI">TI</option>
+                        </select>
+                    </div>
+                </div> 
+                <div class="buttonsEditar">
+                    <input type="button" value="Guardar Cambios" id="ButtonAddEditar"> 
+                    <input type="button" value="Cerrar" id="ButtonCloseEditar" onclick="CloseUpdate()"> 
+                </div>
+            </form>
+    </div>
     <script src="../assets/JavaScript/Alumnos.js"></script>
 </body>
 </html>
