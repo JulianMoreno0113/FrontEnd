@@ -15,6 +15,10 @@ fetch(url).then(function (response){
         let tdButton = document.createElement("td");
         buttonEditar.innerHTML ="Editar";
         buttonEliminar.innerHTML ="Eliminar";
+        buttonEditar.nombre = materias[i].nombreMateria;
+        buttonEditar.addEventListener('click', function(mybutton){
+            OpenUpdate(mybutton.target.nombre);
+        });
         tdButton.appendChild(buttonEditar);
         tdButton.appendChild(buttonEliminar);
         let cadena = `<td>${materias[i].nombreMateria}</td><td>${materias[i].nombreDocente} ${materias[i].apellidoDocente}</td>` 
@@ -100,20 +104,13 @@ function Delete(id){
 }
 
 
-function OpenUpdate(id,nombre,apellido, fechaNacimiento){
-    let modal = document.querySelector(".ModalUpdate");
-    document.getElementById("identificacionUpdate").value = id;
-    document.getElementById("nombreUpdate").value=nombre;
-    document.getElementById("apellidoUpdate").value = apellido;
-    document.getElementById("fechaNacimientoUpdate").value =fechaNacimiento;
+function OpenUpdate(nombre){
+    let modal = document.querySelector(".modalUpdate");
+    document.getElementById("nombreEditar").value=nombre;
     modal.style.display = "block";
 }
 function CloseUpdate(){
-    let modal = document.querySelector(".ModalUpdate");
-    document.getElementById("identificacionUpdate").value = "";
-    document.getElementById("nombreUpdate").value=nombre ="";
-    document.getElementById("apellidoUpdate").value = apellido="";
-    document.getElementById("fechaNacimientoUpdate").value =fechaNacimiento="";
+    let modal = document.querySelector(".modalUpdate");
     modal.style.display = "none"
 }
 function LimpiarTextBox(){

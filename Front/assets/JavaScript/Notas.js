@@ -13,6 +13,13 @@ fetch(url).then(function(response){
         let buttonEliminar = document.createElement("button");
         buttonEditar.innerHTML="Editar";
         buttonEliminar.innerHTML="Eliminar";
+        buttonEditar.nombre = MateriaEstudiante[i].nombreEstudiante;
+        buttonEditar.nombreMateria = MateriaEstudiante[i].nombreMateria;
+        buttonEditar.nota1 = MateriaEstudiante[i].nota1;
+        buttonEditar.nota2 = MateriaEstudiante[i].nota2;
+        buttonEditar.addEventListener('click', function(mybutton){
+            OpenUpdate(mybutton.target.nombre,mybutton.target.nombreMateria,mybutton.target.nota1,mybutton.target.nota2);
+        });
         let campos = `<td>${MateriaEstudiante[i].nombreEstudiante}</td>
                       <td>${MateriaEstudiante[i].nombreMateria}</td>
                       <td contenteditable>${MateriaEstudiante[i].nota1}</td>
@@ -22,10 +29,11 @@ fetch(url).then(function(response){
         buttonEliminar.classList.add("buttonEliminar");
         tdButton.appendChild(buttonEditar);
         tdButton.appendChild(buttonEliminar);
+        buttonEditar.addEventListener("click",OpenUpdate)
         tr.appendChild(tdButton);
         document.querySelector(".tbody").appendChild(tr);
     }
-})
+})}
 
 function Post(){
     fetch(url, {
@@ -100,28 +108,22 @@ function Delete(id){
 }
 
 
-function OpenUpdate(id,nombre,apellido, fechaNacimiento){
-    let modal = document.querySelector(".ModalUpdate");
-    document.getElementById("identificacionUpdate").value = id;
-    document.getElementById("nombreUpdate").value=nombre;
-    document.getElementById("apellidoUpdate").value = apellido;
-    document.getElementById("fechaNacimientoUpdate").value =fechaNacimiento;
+function OpenUpdate(id,nombre,nombreMateria, nota1,nota2){
+    let modal = document.querySelector(".modalUpdate");
+    document.getElementById("nombreUpdate"). value=nombre;
+    document.getElementById("estadoEditar"). value = nombreMateria;
+    document.getElementById("seleccionPeriodo"). value =nota1;
+    document.getElementById("nota"). value =nota2;
     modal.style.display = "block";
 }
 function CloseUpdate(){
-    let modal = document.querySelector(".ModalUpdate");
-    document.getElementById("identificacionUpdate").value = "";
-    document.getElementById("nombreUpdate").value=nombre ="";
-    document.getElementById("apellidoUpdate").value = apellido="";
-    document.getElementById("fechaNacimientoUpdate").value =fechaNacimiento="";
-    modal.style.display = "none"
+    let modal = document.querySelector(".modalUpdate");
+    modal.style.display = "none";
 }
 function LimpiarTextBox(){
-
     document.getElementById("identificacion").value="";
     document.getElementById("nombre").value="";
     document.getElementById("apellido").value="";
     document.getElementById("fechaNacimiento").value="";
     document.getElementById("edad").value="";
-}
 }

@@ -82,6 +82,40 @@
             </tbody>
         </table>
     </section>
+    <!--  MODAL EDITAR NOTAS  -->
+ 
+    <div class="modalUpdate">
+        <div class="headerModal">
+            <h2>Editar Nota</h2>
+            <input type="button" value="X" class="cerrar" id="ButtonCloseEditar" onclick="CloseUpdate()"> 
+        </div>
+            <form class="frmEditar">
+                <div class="contenedorInputsEditar">
+                    <div>
+                        <label for="nombre">Nombre Del Alumno:</label>
+                        <input type="text" id="nombreUpdate" placeholder="Escribe el Nombre">
+                        
+                        <label for="materia">Materia:</label>
+                        <select id="estadoEditar">
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div>
+                        
+                        <label for="periodo">Periodo:</label>
+                        <select id="seleccionPeriodo">
+                            <option>Selecione...</option>
+                            <option value="primerSemestre">Primer Semestre</option>
+                            <option value="segundoSemestre">Segundo Semestre</option>
+                        </select>
+                        <label for="nota">Nota:</label>
+                        <input type="number" id="documentoEditarNota"  placeholder="Digite la nota">
+                    </div>
+                </div> 
+                <div class="buttonsEditar">
+                    <input type="button" value="Guardar Cambios" class="guardarCambios"id="ButtonAddEditar"> 
+                </div>
 </body>
 </html>
 <script src="../assets/JavaScript/Notas.js"></script>
